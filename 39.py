@@ -1,0 +1,17 @@
+# Question 39: Write a program to check whether a number is prime using a loop.
+
+num = 29
+is_prime = True
+
+if num <= 1:
+    is_prime = False
+else:
+    for i in range(2, int(num ** 0.5) + 1):
+        if num % i == 0:
+            is_prime = False
+            break
+
+if is_prime:
+    print(f"{num} is a Prime Number.")
+else:
+    print(f"{num} is Not a Prime Number.")
